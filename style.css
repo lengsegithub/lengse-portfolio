@@ -83,20 +83,63 @@
     align-items: center;
     margin-bottom: 20px;
   }
-  
-  @media (min-width: 768px) {
-    .profile-container {
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      text-align: left;
+  /* Scroll indicators */
+.scroll-container {
+  position: relative;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.scroll-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(67, 97, 238, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.scroll-dot.active {
+  background-color: var(--primary);
+}
+  @media (max-width: 768px) {
+    /* Enhanced card styling for horizontal scroll */
+    .skill-card,
+    .tool-card,
+    .service-card,
+    .benefit-card,
+    .gallery-item {
+      flex: 0 0 calc(85% - 10px);
+      min-height: 100%; /* Ensure consistent height */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
     }
-    
-    .header-text {
-      margin-left: 30px;
+  
+    /* Active card effect when scrolling */
+    .skill-card:active,
+    .tool-card:active,
+    .service-card:active,
+    .benefit-card:active,
+    .gallery-item:active {
+      transform: scale(0.98);
+    }
+  
+    /* Remove hover effects on mobile */
+    .skill-card:hover,
+    .tool-card:hover,
+    .service-card:hover,
+    .benefit-card:hover,
+    .gallery-item:hover {
+      transform: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
   }
-  
   .profile-pic-wrapper {
     position: relative;
     width: 150px;
