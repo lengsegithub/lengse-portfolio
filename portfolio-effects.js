@@ -23,16 +23,39 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+   // Initialize scroll indicators
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollSections = document.querySelectorAll('.skills-grid, .design-showcase, .services-grid, .benefits-grid, .gallery-grid');
+  
+  scrollSections.forEach(section => {
+    const container = section.parentElement;
+    const items = section.children;
+    const indicator = document.createElement('div');
+    indicator.className = 'scroll-indicator';
+    
+    // Create dots for each item
+    for (let i = 0; i < items.length; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'scroll-dot';
+      if (i === 0) dot.classList.add('active');
+      indicator.appendChild(dot);
+    }
+    
+    container.appendChild(indicator);
+    
+    // Update dots on scroll
+    section.addEventListener('scroll', function() {
+      const scrollPos = section.scrollLeft;
+      const itemWidth = items[0].offsetWidth;
+      const activeIndex = Math.round(scrollPos / itemWidth);
+      
+      const dots = indicator.querySelectorAll('.scroll-dot');
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === activeIndex);
       });
     });
-    
+  });
+});
     // Add animation class when elements come into view
     const animateOnScroll = function() {
       const elements = document.querySelectorAll('.fade-in');
