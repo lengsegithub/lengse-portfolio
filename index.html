@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="portfolio-effects.js"></script>
+  <script src="portfolio-effects.js" defer></script>
 </head>
 <body>
 
@@ -19,12 +19,13 @@
   <!-- Floating Particles -->
   <div class="particles" id="particles-js"></div>
 
+  <!-- Header -->
   <header class="fade-in">
     <div class="container header-content">
       <div class="profile-container">
         <div class="profile-pic-wrapper">
-          <img src="images/lengse.jpg" alt="LENG SE" class="profile-pic">
-          <div class="status-dot"></div>
+          <img src="images/lengse.jpg" alt="Portrait of LENG SE" class="profile-pic">
+          <span class="status-dot" aria-label="Online Status"></span>
         </div>
         <div class="header-text">
           <h1>👋 Hello, I'm <span class="highlight">LENG SE</span></h1>
@@ -33,13 +34,15 @@
             <a href="https://web.facebook.com/lengse40/" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="#" aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
             <a href="#" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="@IP19216811_t" aria-label="Telegram" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-            <a href="#" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://t.me/IP19216811_t" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            
           </div>
         </div>
       </div>
     </div>
-    <nav class="sticky-nav">
+
+    <!-- Navigation -->
+    <nav class="sticky-nav" aria-label="Main Navigation">
       <ul>
         <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
         <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
@@ -52,56 +55,49 @@
   </header>
 
   <main>
+    <!-- About Section -->
     <section id="about" class="fade-in card-section">
       <div class="container">
         <h2><i class="fas fa-user"></i> About Me</h2>
         <div class="about-content">
-          <p>I'm a versatile professional with expertise in IT support, electrical services, and creative design. Based in Sihanoukville, Cambodia, I'm passionate about solving technical problems and creating beautiful, functional solutions for both residential and business clients.</p>
+          <p>I'm a versatile professional with expertise in IT support, electrical services, and creative design. Based in Sihanoukville, Cambodia, I enjoy solving technical challenges while crafting beautiful, functional solutions for clients.</p>
           <div class="about-details">
-            <div class="detail-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Sihanoukville, Cambodia</span>
-            </div>
-            <div class="detail-item">
-              <i class="fas fa-language"></i>
-              <span>Khmer (Native), English (Professional)</span>
-            </div>
-            <div class="detail-item">
-              <i class="fas fa-certificate"></i>
-              <span>5+ Years Professional Experience</span>
-            </div>
+            <div class="detail-item"><i class="fas fa-map-marker-alt"></i> <span>Sihanoukville, Cambodia</span></div>
+            <div class="detail-item"><i class="fas fa-language"></i> <span>Khmer (Native), English (Professional)</span></div>
+            <div class="detail-item"><i class="fas fa-certificate"></i> <span>5+ Years Professional Experience</span></div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Experience Section -->
     <section id="experience" class="fade-in card-section">
       <div class="container">
         <h2><i class="fas fa-briefcase"></i> Professional Journey</h2>
         <div class="timeline">
           <div class="timeline-item">
-            <div class="timeline-dot"></div>
+            <span class="timeline-dot"></span>
             <div class="timeline-content">
               <h3>IT Support Specialist</h3>
               <span class="date">2019 - Present</span>
-              <p>Providing comprehensive hardware, software, and networking solutions with a focus on client satisfaction and system optimization. Serving both residential and business clients with customized IT solutions.</p>
+              <p>Providing comprehensive hardware, software, and networking solutions with focus on client satisfaction and system optimization.</p>
               <ul class="timeline-list">
-                <li>Diagnosed and resolved hardware/software issues with 95% first-call resolution rate</li>
+                <li>95% first-call hardware/software issue resolution</li>
                 <li>Implemented data backup solutions for 50+ clients</li>
                 <li>Reduced system downtime by 40% through proactive maintenance</li>
               </ul>
             </div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-dot"></div>
+            <span class="timeline-dot"></span>
             <div class="timeline-content">
               <h3>Network Configuration Expert</h3>
               <span class="date">2020 - Present</span>
-              <p>Specialized in configuring and troubleshooting network devices including MikroTik, TP-Link, and Cisco equipment for optimal performance and security.</p>
+              <p>Specialized in configuring and troubleshooting network devices for optimal performance and security.</p>
               <ul class="timeline-list">
-                <li>Designed and implemented network solutions for 30+ small businesses</li>
-                <li>Improved network speeds by average of 35% through optimization</li>
-                <li>Reduced security vulnerabilities by implementing firewall rules</li>
+                <li>Designed networks for 30+ small businesses</li>
+                <li>Improved network speeds by 35% on average</li>
+                <li>Implemented firewall rules to reduce security vulnerabilities</li>
               </ul>
             </div>
           </div>
@@ -109,6 +105,7 @@
       </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="fade-in card-section">
       <div class="container">
         <h2><i class="fas fa-laptop-code"></i> Technical Expertise</h2>
@@ -147,7 +144,7 @@
             <div class="skill-icon"><i class="fas fa-headset"></i></div>
             <h3>Client Support</h3>
             <ul>
-              <li>Patient, clear communication</li>
+              <li>Clear, patient communication</li>
               <li>Remote assistance</li>
               <li>User training & education</li>
               <li>Documentation creation</li>
@@ -157,6 +154,7 @@
       </div>
     </section>
 
+    <!-- Electrical Section -->
     <section id="electrical" class="fade-in card-section">
       <div class="container">
         <h2><i class="fas fa-bolt"></i> Electrical Services</h2>
@@ -184,127 +182,98 @@
             </ul>
           </div>
         </div>
-        
+
         <div class="client-benefits">
           <h3><i class="fas fa-star"></i> Why Choose My Electrical Services?</h3>
           <div class="benefits-grid">
-            <div class="benefit-card">
-              <i class="fas fa-shield-alt"></i>
-              <h4>Safety First</h4>
-              <p>All work complies with Cambodian electrical safety standards to protect your property and family.</p>
-            </div>
-            <div class="benefit-card">
-              <i class="fas fa-clock"></i>
-              <h4>Quick Response</h4>
-              <p>Available for emergency calls with same-day service when possible.</p>
-            </div>
-            <div class="benefit-card">
-              <i class="fas fa-dollar-sign"></i>
-              <h4>Fair Pricing</h4>
-              <p>Competitive rates with upfront quotes - no hidden fees or surprises.</p>
-            </div>
-            <div class="benefit-card">
-              <i class="fas fa-certificate"></i>
-              <h4>Quality Guarantee</h4>
-              <p>All work comes with a 90-day warranty on labor and materials.</p>
-            </div>
+            <div class="benefit-card"><i class="fas fa-shield-alt"></i><h4>Safety First</h4><p>All work follows Cambodian safety standards.</p></div>
+            <div class="benefit-card"><i class="fas fa-clock"></i><h4>Quick Response</h4><p>Emergency calls handled promptly.</p></div>
+            <div class="benefit-card"><i class="fas fa-dollar-sign"></i><h4>Fair Pricing</h4><p>Transparent, competitive pricing with no surprises.</p></div>
+            <div class="benefit-card"><i class="fas fa-certificate"></i><h4>Quality Guarantee</h4><p>90-day warranty on labor and materials.</p></div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Design Section -->
     <section id="design" class="fade-in card-section">
       <div class="container">
         <h2><i class="fas fa-paint-brush"></i> Creative Design Services</h2>
         <div class="design-showcase">
-          <div class="tool-card">
-            <div class="tool-logo ps"></div>
-            <h3>Graphic Design</h3>
-            <div class="skill-meter">
-              <div class="skill-level" style="width: 85%"></div>
-            </div>
-            <ul>
-              <li>Logo design & branding</li>
-              <li>Business cards & stationery</li>
-              <li>Social media graphics</li>
-              <li>Print materials</li>
-            </ul>
-          </div>
-          <div class="tool-card">
-            <div class="tool-logo corel"></div>
-            <h3>Vector Illustration</h3>
-            <div class="skill-meter">
-              <div class="skill-level" style="width: 78%"></div>
-            </div>
-            <ul>
-              <li>Custom illustrations</li>
-              <li>Icon sets</li>
-              <li>Technical drawings</li>
-              <li>Signage design</li>
-            </ul>
-          </div>
-          <div class="tool-card coming-soon">
-            <div class="tool-logo ai"></div>
-            <h3>Graphic Design</h3>
-            <span class="badge">Coming Soon</span>
-            <ul>
-              <li> Logo Design</li>
-              <li>Branding Materials</li>
-              <li>Illustrations & Icons</li>
-            </ul>
-          </div>
-        </div>
+  <div class="tool-card">
+    <div class="tool-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop">
+    </div>
+    <h3>Graphic Design</h3>
+    <div class="skill-meter"><div class="skill-level" style="width: 85%"></div></div>
+    <ul>
+      <li>Logo design & branding</li>
+      <li>Business cards & stationery</li>
+      <li>Social media graphics</li>
+      <li>Print materials</li>
+    </ul>
+  </div>
+
+  <div class="tool-card">
+    <div class="tool-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/CorelDRAW_logo.svg" alt="CorelDRAW">
+    </div>
+    <h3>Vector Illustration</h3>
+    <div class="skill-meter"><div class="skill-level" style="width: 78%"></div></div>
+    <ul>
+      <li>Custom illustrations</li>
+      <li>Icon sets</li>
+      <li>Technical drawings</li>
+      <li>Signage design</li>
+    </ul>
+  </div>
+
+  <div class="tool-card coming-soon">
+    <div class="tool-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator">
+    </div>
+    <h3>AI-Enhanced Design</h3>
+    <span class="badge">Coming Soon</span>
+    <ul>
+      <li>Logo Design</li>
+      <li>Branding Materials</li>
+      <li>Illustrations & Icons</li>
+    </ul>
+  </div>
+</div>
+
+
         <div class="portfolio-gallery">
-          <h3><i class="fas fa-images"></i> Recent Design Work</h3>
+          <h3><i class="fas fa-images"></i> Recent Work</h3>
           <div class="gallery-grid">
             <div class="gallery-item">
-              <img src="images/design1.jpg" alt="Design Project 1" class="gallery-img">
-              <div class="gallery-overlay">
-                <h4>Business Branding</h4>
-                <p>Logo & stationery design</p>
-              </div>
+              <img src="images/design1.jpg" alt="Business Branding Project" class="gallery-img">
+              <div class="gallery-overlay"><h4>Business Branding</h4><p>Logo & stationery design</p></div>
             </div>
             <div class="gallery-item">
-              <img src="images/design2.jpg" alt="Design Project 2" class="gallery-img">
-              <div class="gallery-overlay">
-                <h4>Name Card</h4>
-                <p>Marketing campaign</p>
-              </div>
+              <img src="images/design2.jpg" alt="Name Card Design Project" class="gallery-img">
+              <div class="gallery-overlay"><h4>Name Card</h4><p>Marketing campaign</p></div>
             </div>
             <div class="gallery-item">
-              <img src="images/design3.jpg" alt="Design Project 3" class="gallery-img">
-              <div class="gallery-overlay">
-                <h4>Print Material</h4>
-                <p>Brochure design</p>
-              </div>
+              <img src="images/design3.jpg" alt="Brochure Design Project" class="gallery-img">
+              <div class="gallery-overlay"><h4>Print Material</h4><p>Brochure design</p></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="fade-in card-section">
       <div class="container">
         <h2><i class="fas fa-paper-plane"></i> Let's Connect</h2>
         <div class="contact-container">
           <div class="contact-info">
             <h3>Get in Touch</h3>
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <span>lengse40@gmail.com</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <span>+855 85 205 604</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Sihanoukville, Cambodia</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-clock"></i>
-              <span>Working 24/7</span>
-            </div>
+            <div class="contact-item"><i class="fas fa-envelope"></i> <span>lengse40@gmail.com</span></div>
+            <div class="contact-item"><i class="fas fa-phone"></i> <span>+855 85 205 604</span></div>
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i> <span>Sihanoukville, Cambodia</span></div>
+            <div class="contact-item"><i class="fas fa-clock"></i> <span>Working 24/7</span></div>
             <div class="contact-social">
               <h4>Follow Me</h4>
               <div class="social-links">
@@ -316,17 +285,11 @@
             </div>
           </div>
           <form class="contact-form" id="contactForm">
+            <div class="form-group"><input type="text" id="name" name="name" placeholder="Your Name" required></div>
+            <div class="form-group"><input type="email" id="email" name="email" placeholder="Your Email" required></div>
+            <div class="form-group"><input type="tel" id="phone" name="phone" placeholder="Phone Number (Optional)"></div>
             <div class="form-group">
-              <input type="text" id="name" name="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" name="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-              <input type="tel" id="phone" name="phone" placeholder="Phone Number (Optional)">
-            </div>
-            <div class="form-group">
-              <select id="service" name="service">
+              <select id="service" name="service" required>
                 <option value="">Select a Service</option>
                 <option value="it-support">IT Support</option>
                 <option value="electrical">Electrical Services</option>
@@ -334,17 +297,15 @@
                 <option value="other">Other Inquiry</option>
               </select>
             </div>
-            <div class="form-group">
-              <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-            </div>
+            <div class="form-group"><textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea></div>
             <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
           </form>
         </div>
       </div>
     </section>
-
   </main>
 
+  <!-- Footer -->
   <footer class="fade-in">
     <div class="container">
       <div class="footer-content">
@@ -362,7 +323,7 @@
           <a href="https://web.facebook.com/lengse40/" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
           <a href="#" aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
           <a href="#" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="Telegram" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+          <a href="https://t.me/IP19216811_t" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
         </div>
       </div>
       <div class="copyright">
@@ -371,6 +332,10 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Auto-update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js" defer></script>
 </body>
 </html>
